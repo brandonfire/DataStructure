@@ -1,3 +1,5 @@
+package linked;
+
 public class Linkedlist {
 	Node head;
 	int size;
@@ -8,6 +10,14 @@ public class Linkedlist {
 	public void addFirst(Node fNode){
 		fNode.setNext(head);
 		head=fNode;
+	}
+	public void addLast(Node lNode){
+		Node tem;
+		tem = head;
+		while(tem.getNext()!=null){
+			tem = tem.getNext();
+		}
+		tem.setNext(lNode);
 	}
 	public String get(int pos){
 		int i;
